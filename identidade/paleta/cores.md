@@ -8,32 +8,30 @@
 | Pergaminho | #D6C2AA | 214, 194, 170 | Equilíbrio, verdade e aterramento | Fundo claro |
 | Azul-Petróleo | #2E4F4A | 46, 79, 74 | Clareza, profundidade e lealdade | Secundária |
 
-## Acento e apoio
+## Cores de apoio
 | Cor | HEX | RGB | Uso |
 |---|---|---|---|
-| Dourado Antigo | #C3A37F | 195, 163, 127 | Estrelas, filetes, títulos em fundo escuro |
-| Verde Sálvia | #8B9777 | 139, 151, 119 | Folhas e ícones sobre fundo verde |
-| Roxo Noite | #24152A | 36, 21, 42 | Fundos profundos e vinhetas |
-| Linho | #EFE5D8 | 239, 229, 216 | Texto sobre fundos escuros |
-| Tinta | #2A1824 | 42, 24, 36 | Texto sobre pergaminho |
-| Bege Areia | #B89B7C | 184, 155, 124 | Texturas, molduras e áreas de apoio |
+| Dourado Vela | #D4B06A | 212, 176, 106 | Estrelas, filetes e títulos em fundo escuro |
+| Marfim | #F4EBDA | 244, 235, 218 | Textos sobre fundos escuros |
+| Musgo | #556B47 | 85, 107, 71 | Folhas, ícones e detalhes naturais |
+| Bronze | #9C7444 | 156, 116, 68 | Estrelas e filetes sobre fundo claro |
+| Café | #4A3426 | 74, 52, 38 | Textos sobre o pergaminho |
 
 ## Proporções
-- Modo claro (catálogo): Pergaminho 60% · Roxo 25% · Verde 10% · Dourado 5%
-- Modo escuro (capas e destaques): Roxo 60% · Linho 25% · Dourado 10% · Petróleo 5%
+- Modo claro (catálogo): Pergaminho 60% · Roxo 25% · Verde 10% · Bronze 5%
+- Modo escuro (capas e destaques): Roxo 60% · Marfim 25% · Dourado 10% · Musgo 5%
 
 ## Combinações aprovadas (contraste)
-- Linho sobre Roxo Ameixa — 11,2 : 1
-- Dourado sobre Roxo Noite — 7,3 : 1
-- Tinta sobre Pergaminho — 9,7 : 1
+- Marfim sobre Roxo Ameixa — 11,8 : 1
+- Dourado sobre Roxo Ameixa — 6,8 : 1
+- Dourado sobre Verde Floresta — 7,6 : 1
+- Marfim sobre Verde Floresta — 13,2 : 1
 - Roxo sobre Pergaminho — 8,1 : 1
-- Linho sobre Verde Floresta — 12,6 : 1
-- Dourado sobre Verde Floresta — 6,6 : 1
-- Verde Sálvia sobre Verde Floresta — 5,1 : 1 (ícones e folhas)
-- Linho sobre Azul-Petróleo — 7,2 : 1
+- Café sobre Pergaminho — 6,7 : 1
+- Marfim sobre Azul-Petróleo — 7,6 : 1
 
 ## Evitar
-- Dourado em textos sobre fundo claro (1,4 : 1) — só em ornamentos.
-- Verde com petróleo ou roxo como texto/fundo entre si (escuros demais juntos).
-- Bege Areia em textos.
+- Dourado sobre o pergaminho (1,2 : 1): no fundo claro, estrelas e filetes vão em Bronze.
+- Verde, roxo e petróleo entre si como texto e fundo: sobre eles, use Marfim ou Dourado.
+- Musgo em textos sobre o verde escuro (2,7 : 1): ele é para folhas e ícones, de preferência no fundo claro.
 - As quatro cores fortes na mesma arte: uma principal + no máximo uma secundária.
