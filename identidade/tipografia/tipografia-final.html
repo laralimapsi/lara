@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>Tipografia — Lara Oraculista</title>
-<link rel="stylesheet" href="../../artes/como-funcionam-as-leituras/fonts2/fonts.css">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
   :root{--roxo:#3B2340;--verde:#11281A;--perg:#D6C2AA;--petroleo:#2E4F4A}
   *{margin:0;padding:0;box-sizing:border-box}
   body{width:1080px;background:#111}
-  .pg{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'Noto Serif',serif;color:var(--perg);
+  .pg{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'EB Garamond',serif;color:var(--perg);
     background:
       radial-gradient(ellipse 60% 40% at 70% 18%, rgba(120,70,130,.35), transparent 70%),
       radial-gradient(ellipse 70% 50% at 20% 85%, rgba(90,50,100,.35), transparent 70%),
       radial-gradient(ellipse 120% 100% at 50% 45%, #3B2340 0%, #2C1A32 55%, #1B0F20 100%)}
   .ruido{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.35}
-  .tit{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:340;letter-spacing:-.015em;line-height:1}
-  .caps{font-weight:500;text-transform:uppercase;letter-spacing:.24em}
+  .tit{font-family:'Cinzel',serif;font-weight:400;letter-spacing:.05em;line-height:1.05;text-transform:uppercase}
+  .caps{font-family:'Cinzel',serif;font-weight:600;text-transform:uppercase;letter-spacing:.22em}
   .orn{display:flex;align-items:center;justify-content:center;gap:14px}
   .orn i{display:block;height:1.2px;width:130px}
   .orn i:first-child{background:linear-gradient(90deg,transparent,#B8924F)}
@@ -23,27 +23,27 @@
 
   .cab{position:absolute;top:62px;left:0;right:0;text-align:center}
   .cab .eyebrow{font-size:14px;color:rgba(214,194,170,.8);margin:16px 0 18px}
-  .cab h1{font-size:92px}
-  .cab .sub{font-style:italic;font-size:21px;margin-top:14px;letter-spacing:.02em}
+  .cab h1{font-size:80px}
+  .cab .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:25px;margin-top:14px;letter-spacing:.02em}
 
   .hier{position:absolute;top:322px;left:72px;right:72px}
   .row{display:grid;grid-template-columns:250px 1fr;column-gap:34px;align-items:center;padding:17px 0;border-top:1px solid rgba(214,194,170,.18)}
   .row:last-child{border-bottom:1px solid rgba(214,194,170,.18)}
-  .row .k{font-size:11.5px;color:rgba(214,194,170,.75)}
-  .row .f{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:400;font-size:23px;margin-top:6px;line-height:1.1}
-  .row .d{font-size:12.5px;color:rgba(214,194,170,.65);margin-top:5px;line-height:1.4}
+  .row .k{font-size:11px;color:rgba(214,194,170,.75)}
+  .row .f{font-family:'EB Garamond',serif;font-weight:500;font-size:23px;margin-top:6px;line-height:1.1}
+  .row .d{font-size:14px;color:rgba(214,194,170,.65);margin-top:5px;line-height:1.4}
   .ex{color:var(--perg);text-wrap:balance}
 
-  .modos{position:absolute;top:1040px;left:72px;right:72px}
-  .modos .rot{display:flex;align-items:center;gap:18px;font-size:12px;color:rgba(214,194,170,.8);margin-bottom:16px}
+  .modos{position:absolute;top:1050px;left:72px;right:72px}
+  .modos .rot{display:flex;align-items:center;gap:18px;font-size:11.5px;color:rgba(214,194,170,.8);margin-bottom:16px}
   .modos .rot i{flex:1;height:1px;background:linear-gradient(90deg,rgba(214,194,170,.45),transparent)}
   .mm{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .m{border-radius:12px;height:178px;padding:16px 16px 0;text-align:center;border:1px solid rgba(214,194,170,.2);position:relative}
-  .m .l{font-size:9px;letter-spacing:.24em;font-weight:500;text-transform:uppercase}
-  .m .t{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:340;letter-spacing:-.02em;font-size:31px;line-height:.95;margin-top:8px}
-  .m .s{font-style:italic;font-size:11.5px;margin-top:7px;line-height:1.3}
+  .m{border-radius:12px;height:166px;padding:16px 16px 0;text-align:center;border:1px solid rgba(214,194,170,.2);position:relative}
+  .m .l{font-family:'Cinzel';font-size:9px;letter-spacing:.22em;font-weight:600;text-transform:uppercase}
+  .m .t{font-family:'Cinzel',serif;font-weight:400;letter-spacing:.05em;text-transform:uppercase;font-size:22px;line-height:1.1;margin-top:10px}
+  .m .s{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:14px;margin-top:7px;line-height:1.3}
   .m .st{position:absolute;bottom:14px;left:0;right:0;display:flex;justify-content:center}
-  .pe{position:absolute;bottom:40px;left:0;right:0;text-align:center;font-size:12px;color:rgba(214,194,170,.6)}
+  .pe{position:absolute;bottom:40px;left:0;right:0;text-align:center;font-size:11px;color:rgba(214,194,170,.6)}
 </style>
 </head>
 <body>
@@ -60,33 +60,33 @@
     <div class="orn"><i></i><svg width="44" height="44" viewBox="-31 -31 62 62"><use href="#st" fill="url(#gm)"/></svg><i></i></div>
     <div class="eyebrow caps">Identidade visual · Lara Oraculista</div>
     <h1 class="tit">Tipografia</h1>
-    <div class="sub">Newsreader nos títulos, Noto Serif em todo o resto.</div>
+    <div class="sub">Cinzel nos títulos, Cormorant Garamond nos subtítulos e EB Garamond nos textos.</div>
   </div>
 
   <div class="hier">
     <div class="row">
-      <div><div class="k caps">Título principal</div><div class="f">Newsreader</div><div class="d">Light 340 · espaçamento −1,5%<br>entrelinha 95%</div></div>
-      <div class="ex tit" style="font-size:78px;line-height:.95">Caminhos do Amor</div>
+      <div><div class="k caps">Título principal</div><div class="f">Cinzel</div><div class="d">Regular 400 · CAIXA ALTA · +5%</div></div>
+      <div class="ex tit" style="font-size:47px;white-space:nowrap">Caminhos do Amor</div>
     </div>
     <div class="row">
-      <div><div class="k caps">Título de seção</div><div class="f">Newsreader</div><div class="d">Regular 400 · espaçamento −1%</div></div>
-      <div class="ex" style="font-family:'Newsreader';font-variation-settings:'opsz' 72;font-weight:400;font-size:38px;letter-spacing:-.01em;line-height:1">Como funcionam as leituras</div>
+      <div><div class="k caps">Título de seção</div><div class="f">Cinzel</div><div class="d">Regular 400 · CAIXA ALTA · +8%</div></div>
+      <div class="ex" style="font-family:'Cinzel';font-weight:400;font-size:30px;letter-spacing:.08em;text-transform:uppercase;line-height:1.1">Como funcionam as leituras</div>
     </div>
     <div class="row">
-      <div><div class="k caps">Subtítulo</div><div class="f">Noto Serif Itálico</div><div class="d">Regular 400 · espaçamento +2%</div></div>
-      <div class="ex" style="font-style:italic;font-size:22px;letter-spacing:.02em;line-height:1.35">O que os próximos seis meses reservam para sua vida amorosa?</div>
+      <div><div class="k caps">Subtítulo</div><div class="f">Cormorant Garamond</div><div class="d">Itálico Medium 500</div></div>
+      <div class="ex" style="font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:29px;line-height:1.25">O que os próximos seis meses reservam para sua vida amorosa?</div>
     </div>
     <div class="row">
-      <div><div class="k caps">Rótulo</div><div class="f">Noto Serif</div><div class="d">Medium 500 · CAIXA ALTA<br>espaçamento +24%</div></div>
+      <div><div class="k caps">Rótulo</div><div class="f">Cinzel</div><div class="d">SemiBold 600 · CAIXA ALTA · +22%</div></div>
       <div class="ex caps" style="font-size:15px">Leitura indicada para</div>
     </div>
     <div class="row">
-      <div><div class="k caps">Texto</div><div class="f">Noto Serif</div><div class="d">Regular 400 · entrelinha 145%<br>destaques em Medium 500</div></div>
-      <div class="ex" style="font-size:17.5px;line-height:1.45">Eu analiso seu contexto de forma aprofundada e anoto todas as informações acessadas pelas cartas. Você recebe <b style="font-weight:500">uma foto da tiragem e áudios</b> com a interpretação detalhada.</div>
+      <div><div class="k caps">Texto</div><div class="f">EB Garamond</div><div class="d">Regular 400 · entrelinha 140%</div></div>
+      <div class="ex" style="font-family:'EB Garamond';font-size:20px;line-height:1.4">Eu analiso seu contexto de forma aprofundada e anoto todas as informações acessadas pelas cartas. Você recebe <b style="font-weight:600">uma foto da tiragem e áudios</b> com a interpretação detalhada.</div>
     </div>
     <div class="row">
-      <div><div class="k caps">Detalhe</div><div class="f">Noto Serif</div><div class="d">Regular 400 · pequeno · espaçamento +8%</div></div>
-      <div class="ex" style="font-size:13.5px;letter-spacing:.08em;opacity:.8">Agendamentos são feitos após o envio do comprovante de pagamento.</div>
+      <div><div class="k caps">Detalhe</div><div class="f">EB Garamond Itálico</div><div class="d">Regular 400 · tamanho pequeno</div></div>
+      <div class="ex" style="font-family:'EB Garamond';font-style:italic;font-size:18px;opacity:.85">Agendamentos são feitos após o envio do comprovante de pagamento.</div>
     </div>
   </div>
 

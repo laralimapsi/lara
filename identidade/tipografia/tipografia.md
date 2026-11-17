@@ -1,15 +1,15 @@
-# Tipografia — Lara Oraculista
+# Tipografia — Lara Oraculista · Clássico Místico
 
-Newsreader nos títulos, Noto Serif em todo o resto (fontes gratuitas do Google Fonts).
+Cinzel nos títulos, Cormorant Garamond nos subtítulos e EB Garamond nos textos (fontes gratuitas do Google Fonts).
 
 | Nível | Fonte | Peso / estilo | Ajustes |
 |---|---|---|---|
-| Título principal | Newsreader (versão Display) | Light 340 | espaçamento −1,5% · entrelinha 95% |
-| Título de seção | Newsreader (versão Display) | Regular 400 | espaçamento −1% |
-| Subtítulo | Noto Serif | Itálico Regular 400 | espaçamento +2% |
-| Rótulo | Noto Serif | Medium 500 · CAIXA ALTA | espaçamento +24% |
-| Texto | Noto Serif | Regular 400 (destaques em Medium 500) | entrelinha 145% |
-| Detalhe | Noto Serif | Regular 400, tamanho pequeno | espaçamento +8% |
+| Título principal | Cinzel | Regular 400 · CAIXA ALTA | espaçamento +5% · entrelinha 105% |
+| Título de seção | Cinzel | Regular 400 · CAIXA ALTA | espaçamento +8% |
+| Subtítulo | Cormorant Garamond | Itálico Medium 500 | — |
+| Rótulo | Cinzel | SemiBold 600 · CAIXA ALTA | espaçamento +22% |
+| Texto | EB Garamond | Regular 400 (destaques em Medium/SemiBold) | entrelinha 140% |
+| Detalhe | EB Garamond | Itálico Regular 400, tamanho pequeno | — |
 
 ## Cores da tipografia
 - Modos roxo, verde e petróleo: todo texto em Pergaminho `#D6C2AA`.
