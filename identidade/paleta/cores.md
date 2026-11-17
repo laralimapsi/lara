@@ -11,17 +11,17 @@
 ## Cores de apoio
 | Cor | HEX | RGB | Uso |
 |---|---|---|---|
-| Dourado Metálico | #C9A45F (cor base) | 201, 164, 95 | Folha de ouro: estrelas, filetes e títulos sobre fundos escuros |
+| Dourado Metálico | #CFAA63 (cor base) | 207, 170, 99 | Folha de ouro: estrelas, filetes e títulos sobre fundos escuros |
 | Marfim | #F4EBDA | 244, 235, 218 | Textos sobre fundos escuros e áreas de respiro no fundo claro |
 
 ### Como fazer o efeito metálico
-Use um degradê com estas 4 cores (do brilho para a sombra):
-`#F6E7B4` → `#E2C27C` → `#C9A45F` → `#8C6A32`
+Degradê suave e homogêneo, com só 3 tons e um único brilho no centro:
+`#BA9653` (sombra) → `#CFAA63` (base) → `#E3C88C` (brilho) → `#CFAA63` → `#BA9653`
 
-- Em títulos: degradê vertical (de cima para baixo), começando no brilho e terminando na sombra.
-- Em formas e estrelas: degradê na diagonal, alternando brilho e sombra para parecer folha de ouro.
-- Quando não der para usar degradê (ex.: texto pequeno), use a cor base `#C9A45F`.
-- No Canva: selecione o elemento → Cor → "Degradê" e insira os códigos acima; ou use um elemento/textura de "gold foil".
+- Em títulos: degradê vertical de `#E3C88C` (em cima) para `#C29E59` (embaixo).
+- Em formas e estrelas: degradê diagonal, com o brilho no meio.
+- Quando não der para usar degradê (ex.: texto pequeno), use a cor base `#CFAA63`.
+- No Canva: selecione o elemento → Cor → "Degradê" e insira os códigos acima.
 
 ## Proporções
 - Modo claro (catálogo): Pergaminho 60% · Roxo 25% · Verde 10% · Marfim 5%
@@ -30,11 +30,11 @@ Use um degradê com estas 4 cores (do brilho para a sombra):
 
 ## Combinações aprovadas (contraste)
 - Marfim sobre Roxo Ameixa — 11,8 : 1
-- Dourado sobre Roxo Ameixa — 6,0 : 1
-- Dourado sobre Verde Floresta — 6,7 : 1
+- Dourado sobre Roxo Ameixa — 6,4 : 1
+- Dourado sobre Verde Floresta — 7,1 : 1
 - Marfim sobre Verde Floresta — 13,2 : 1
 - Marfim sobre Azul-Petróleo — 7,6 : 1
-- Dourado sobre Azul-Petróleo — 3,8 : 1 (só em títulos e ornamentos; use os tons claros do degradê)
+- Dourado sobre Azul-Petróleo — 4,1 : 1 (prefira títulos e ornamentos)
 - Azul-Petróleo sobre Pergaminho — 5,2 : 1
 - Roxo sobre Pergaminho — 8,1 : 1
 - Verde sobre Pergaminho — 9,1 : 1
