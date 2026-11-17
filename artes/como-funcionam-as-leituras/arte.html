@@ -2,88 +2,88 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Como funcionam as leituras? — Lara Oraculista</title>
-<link rel="stylesheet" href="fonts/fonts.css">
+<title>Como funcionam as leituras? — Lara Oraculista (v2)</title>
+<link rel="stylesheet" href="fonts2/fonts.css">
 <style>
   :root{
     --ameixa:#260414;
     --ameixa-texto:#4B1831;
     --oliva:#2F381C;
     --ambar:#B77A2E;
-    --pergaminho:#F0CDAF;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{width:1080px;height:1350px;background:#e9c7a8}
   .arte{
     position:relative;width:1080px;height:1350px;overflow:hidden;
-    font-family:'EB Garamond',serif;color:var(--ameixa-texto);
+    font-family:'Noto Serif',serif;color:var(--ameixa-texto);
     background:
-      radial-gradient(ellipse 70% 55% at 50% 42%, rgba(250,234,214,.95) 0%, rgba(246,224,200,.6) 45%, rgba(246,224,200,0) 75%),
-      radial-gradient(ellipse 120% 100% at 50% 50%, #F3D7BC 0%, #EECBAA 70%, #E2B892 100%);
+      radial-gradient(ellipse 70% 50% at 50% 38%, rgba(251,236,218,.95) 0%, rgba(247,226,203,.55) 45%, rgba(247,226,203,0) 78%),
+      radial-gradient(ellipse 120% 100% at 50% 50%, #F4D9BF 0%, #EECBAA 68%, #E0B58F 100%);
   }
-  /* textura de papel */
   .textura{position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply}
-  .textura.fina{opacity:.16}
-  .textura.nuvem{opacity:.22}
+  .textura.fina{opacity:.15}
+  .textura.nuvem{opacity:.24}
   .vinheta{position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(ellipse 85% 80% at 50% 48%, rgba(0,0,0,0) 60%, rgba(120,62,30,.16) 100%)}
+    background:radial-gradient(ellipse 88% 82% at 50% 48%, rgba(0,0,0,0) 58%, rgba(120,62,30,.18) 100%)}
 
-  /* moldura dupla aberta */
-  .moldura{position:absolute;inset:34px;border:1.4px solid rgba(183,122,46,.75);border-radius:6px}
-  .moldura.interna{inset:43px;border-width:.8px;border-color:rgba(183,122,46,.45);border-radius:3px}
-  .gema{position:absolute;left:50%;transform:translate(-50%,-50%);width:46px;height:30px;
-    display:flex;align-items:center;justify-content:center;background:#F3D9C0}
-  .gema.topo{top:38px}
-  .gema.base{top:1312px;background:#EFCFB2}
+  /* cantoneiras finas nos cantos sem folhagem */
+  .canto{position:absolute;width:74px;height:74px;border-color:rgba(183,122,46,.8);border-style:solid;border-width:0}
+  .canto.td{top:40px;right:40px;border-top-width:1.3px;border-right-width:1.3px}
+  .canto.be{bottom:40px;left:40px;border-bottom-width:1.3px;border-left-width:1.3px}
+  .canto::after{content:"";position:absolute;width:5px;height:5px;background:var(--ambar);transform:rotate(45deg)}
+  .canto.td::after{top:-3px;right:-3px}
+  .canto.be::after{bottom:-3px;left:-3px}
 
   .folha{position:absolute;pointer-events:none;filter:drop-shadow(2px 4px 5px rgba(70,40,10,.18))}
-  .folha.sup{width:265px;left:-62px;top:-70px;transform:rotate(180deg) scaleX(-1) rotate(-6deg)}
-  .folha.inf{width:300px;right:-38px;bottom:-44px;transform:rotate(-4deg)}
+  .folha.sup{width:255px;left:-66px;top:-74px;transform:rotate(180deg) scaleX(-1) rotate(-8deg)}
+  .folha.inf{width:290px;right:-40px;bottom:-46px;transform:rotate(-2deg)}
 
-  .conteudo{position:absolute;inset:0;padding:88px 104px 0 104px}
+  .conteudo{position:absolute;inset:0;padding:86px 100px 0}
 
-  .cabecalho{text-align:center}
-  .estrela-linha{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:16px}
-  .estrela-linha i{display:block;height:1.4px;width:150px}
-  .estrela-linha i:first-child{background:linear-gradient(90deg,rgba(183,122,46,0),var(--ambar))}
-  .estrela-linha i:last-child{background:linear-gradient(90deg,var(--ambar),rgba(183,122,46,0))}
+  /* linhas e ornamentos */
+  .orn{display:flex;align-items:center;justify-content:center;gap:14px}
+  .orn i{display:block;height:1.3px}
+  .orn i:first-child{background:linear-gradient(90deg,rgba(183,122,46,0),var(--ambar))}
+  .orn i:last-child{background:linear-gradient(90deg,var(--ambar),rgba(183,122,46,0))}
+  .orn.topo i{width:170px}
 
-  h1{font-family:'GFS Didot',serif;font-weight:400;color:var(--ameixa);
-     font-size:96px;line-height:.98;letter-spacing:-.5px}
-  h1 .l2{display:block;font-size:104px}
+  h1{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:340;
+     color:var(--ameixa);text-align:center;letter-spacing:-.022em;line-height:.9;
+     font-size:104px;margin-top:16px}
+  h1 span{display:block}
 
-  .divisor{display:flex;align-items:center;justify-content:center;gap:14px;margin:30px auto 0;width:760px}
-  .divisor i{flex:1;height:1.2px}
-  .divisor i:first-child{background:linear-gradient(90deg,rgba(183,122,46,0),var(--ambar) 70%)}
-  .divisor i:last-child{background:linear-gradient(90deg,var(--ambar) 30%,rgba(183,122,46,0))}
+  .rotulo{display:flex;align-items:center;gap:22px;margin-top:30px}
+  .rotulo i{flex:1;height:1.3px}
+  .rotulo i:first-child{background:linear-gradient(90deg,rgba(183,122,46,0),var(--ambar))}
+  .rotulo i:last-child{background:linear-gradient(90deg,var(--ambar),rgba(183,122,46,0))}
+  .rotulo b{font-weight:500;font-size:21px;letter-spacing:.32em;color:var(--ameixa);margin-right:-.32em}
+  .losango{display:flex;justify-content:center;margin-top:20px;height:14px}
 
-  .passos{position:relative;margin-top:30px;padding-right:18px;list-style:none}
-  .passos::before{ /* linha do tempo */
-    content:"";position:absolute;left:31px;top:34px;bottom:58px;width:1.2px;
-    background:linear-gradient(180deg,rgba(183,122,46,.15),rgba(183,122,46,.75) 12%,rgba(183,122,46,.75) 88%,rgba(183,122,46,.15));
-  }
-  .passo{position:relative;display:grid;grid-template-columns:64px 1fr;column-gap:30px;margin-bottom:28px}
-  .num{position:relative;width:64px;height:64px;border-radius:50%;
-       background:radial-gradient(circle at 50% 40%,#FBEBDA,#F2D6BA);
-       border:1.3px solid var(--ambar);box-shadow:0 0 0 5px rgba(243,217,192,1),0 0 0 6px rgba(183,122,46,.28);
-       display:flex;align-items:center;justify-content:center;
-       font-family:'GFS Didot',serif;font-size:33px;color:var(--ambar);line-height:1;padding-top:3px}
-  .passo h2{font-family:'EB Garamond',serif;font-weight:500;color:var(--ameixa);
-     font-size:33px;line-height:1.1;letter-spacing:.1px;margin:5px 0 8px}
-  .passo p{text-wrap:pretty;font-size:24.5px;line-height:1.36;color:var(--ameixa-texto)}
-  .passo p em{font-style:italic;font-weight:500;color:var(--oliva)}
+  .passo{display:grid;grid-template-columns:78px 1fr;column-gap:22px;padding:30px 0 30px}
+  .passo + .passo{border-top:0}
+  .sep{height:1.1px;margin:0 30px 0 100px;background:linear-gradient(90deg,rgba(183,122,46,.75),rgba(183,122,46,.08))}
+  .n{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:300;font-size:70px;
+     line-height:.8;color:var(--ambar);text-align:right;letter-spacing:-.03em;padding-top:2px}
+  .passo h2{font-weight:400;font-style:italic;color:var(--oliva);font-size:27.5px;line-height:1.15;
+     letter-spacing:.015em;margin-bottom:9px}
+  .passo p{font-size:21px;line-height:1.45;color:var(--ameixa-texto);text-wrap:pretty}
+  .passo p strong{white-space:nowrap;font-weight:600;color:var(--ameixa)}
 
-  .fecho{position:absolute;left:0;right:0;bottom:84px;display:flex;justify-content:center;align-items:center;gap:14px}
-  .fecho i{display:block;height:1.2px;width:120px}
-  .fecho i:first-child{background:linear-gradient(90deg,rgba(183,122,46,0),var(--ambar))}
-  .fecho i:last-child{background:linear-gradient(90deg,var(--ambar),rgba(183,122,46,0))}
+  .duplo{display:grid;grid-template-columns:1fr 1.3px 1fr;column-gap:26px;padding-top:33px}
+  .duplo .passo{padding:0;grid-template-columns:56px 1fr;column-gap:14px}
+  .duplo .vline{background:linear-gradient(180deg,rgba(183,122,46,0),var(--ambar) 20%,var(--ambar) 80%,rgba(183,122,46,0))}
+  .duplo .n{font-size:58px}
+  .duplo h2{font-size:24px;letter-spacing:0}
+  .duplo .passo p{font-size:20px}
+
+  .fecho{position:absolute;left:0;right:0;bottom:96px}
+  .fecho i{width:150px}
 </style>
 </head>
 <body>
 <div class="arte">
-  <!-- texturas -->
   <svg class="textura nuvem" width="1080" height="1350">
-    <filter id="nuvem"><feTurbulence type="fractalNoise" baseFrequency=".006" numOctaves="4" seed="7"/>
+    <filter id="nuvem"><feTurbulence type="fractalNoise" baseFrequency=".006" numOctaves="4" seed="11"/>
       <feColorMatrix values="0 0 0 0 .55  0 0 0 0 .38  0 0 0 0 .25  0 0 0 1.1 -.35"/></filter>
     <rect width="100%" height="100%" filter="url(#nuvem)"/>
   </svg>
@@ -94,77 +94,74 @@
   </svg>
   <div class="vinheta"></div>
 
-  <svg class="moldura-svg" width="1080" height="1350" style="position:absolute;inset:0">
-    <g fill="none" stroke="#B77A2E">
-      <path stroke-opacity=".75" stroke-width="1.4" d="M518 34 H40 Q34 34 34 40 V1310 Q34 1316 40 1316 H518 M562 1316 H1040 Q1046 1316 1046 1310 V40 Q1046 34 1040 34 H562"/>
-      <path stroke-opacity=".45" stroke-width=".8" d="M522 43 H46 Q43 43 43 46 V1304 Q43 1307 46 1307 H522 M558 1307 H1034 Q1037 1307 1037 1304 V46 Q1037 43 1034 43 H558"/>
-    </g>
-    <use href="#losango" transform="translate(540 38.5) scale(1.05)"/>
-    <use href="#losango" transform="translate(540 1311.5) scale(1.05)"/>
-  </svg>
-
   <svg width="0" height="0" style="position:absolute">
     <defs>
-      <!-- estrela de 8 pontas -->
       <g id="estrela8">
         <path fill="#B77A2E" d="M0-22 L2.2-4.2 L15.6-15.6 L4.2-2.2 L22 0 L4.2 2.2 L15.6 15.6 L2.2 4.2 L0 22 L-2.2 4.2 L-15.6 15.6 L-4.2 2.2 L-22 0 L-4.2-2.2 L-15.6-15.6 L-2.2-4.2Z"/>
-        <path fill="#B77A2E" opacity=".9" d="M0-30 L1.1-9 L0 0 L-1.1-9Z M0 30 L1.1 9 L0 0 L-1.1 9Z M-30 0 L-9 1.1 L0 0 L-9-1.1Z M30 0 L9 1.1 L0 0 L9-1.1Z"/>
-        <circle r="2.6" fill="#F6E3CE"/>
+        <path fill="#B77A2E" d="M0-30 L1.1-9 L0 0 L-1.1-9Z M0 30 L1.1 9 L0 0 L-1.1 9Z M-30 0 L-9 1.1 L0 0 L-9-1.1Z M30 0 L9 1.1 L0 0 L9-1.1Z"/>
       </g>
       <g id="losango"><path fill="#B77A2E" d="M0-10 Q1.6-1.6 10 0 Q1.6 1.6 0 10 Q-1.6 1.6 -10 0 Q-1.6-1.6 0-10Z"/></g>
     </defs>
   </svg>
 
+  <div class="canto td"></div>
+  <div class="canto be"></div>
   <img class="folha sup" src="assets/folhagem.png" alt="">
   <img class="folha inf" src="assets/folhagem.png" alt="">
 
   <div class="conteudo">
-    <header class="cabecalho">
-      <div class="estrela-linha"><i></i><svg width="62" height="62" viewBox="-31 -31 62 62"><use href="#estrela8"/></svg><i></i></div>
-      <h1>Como funcionam<span class="l2">as leituras?</span></h1>
-      <div class="divisor"><i></i><svg width="18" height="18" viewBox="-11 -11 22 22"><use href="#losango"/></svg><i></i></div>
-    </header>
+    <div class="orn topo"><i></i><svg width="58" height="58" viewBox="-31 -31 62 62"><use href="#estrela8"/></svg><i></i></div>
 
-    <ol class="passos">
-      <li class="passo">
-        <div class="num">1</div>
-        <div>
-          <h2>Escolha sua leitura</h2>
-          <p>Explore os métodos disponíveis no catálogo e escolha aquele que melhor atende às suas dúvidas. Se precisar de ajuda, posso te orientar na escolha.</p>
-        </div>
-      </li>
-      <li class="passo">
-        <div class="num">2</div>
-        <div>
-          <h2>Solicite seu atendimento</h2>
-          <p>Informe o método escolhido e envie seu nome completo, além do nome da outra pessoa envolvida, caso haja. Em seguida, realize o pagamento e encaminhe o comprovante. Um contexto da sua situação é bem-vindo.</p>
-        </div>
-      </li>
-      <li class="passo">
-        <div class="num">3</div>
-        <div>
-          <h2>Como a leitura é realizada?</h2>
-          <p>Eu analiso seu contexto de forma aprofundada e anoto todas as informações acessadas pelas cartas. Você receberá uma foto da tiragem e áudios com a interpretação detalhada.</p>
-        </div>
-      </li>
-      <li class="passo">
-        <div class="num">4</div>
+    <h1><span>Como funcionam</span><span>as leituras?</span></h1>
+
+    <div class="losango"><svg width="14" height="14" viewBox="-11 -11 22 22"><use href="#losango"/></svg></div>
+    <div class="rotulo" style="margin-top:14px"><i></i><b>PASSO A PASSO</b><i></i></div>
+
+    <div class="passo">
+      <div class="n">1</div>
+      <div>
+        <h2>Escolha sua leitura</h2>
+        <p>Explore os métodos disponíveis no catálogo e escolha aquele que melhor atende às suas dúvidas. Se precisar de ajuda, posso te orientar na escolha.</p>
+      </div>
+    </div>
+    <div class="sep"></div>
+    <div class="passo">
+      <div class="n">2</div>
+      <div>
+        <h2>Solicite seu atendimento</h2>
+        <p>Informe o método escolhido e envie seu nome completo, além do nome da outra pessoa envolvida, caso haja. Em seguida, realize o pagamento e encaminhe o comprovante. Um contexto da sua situação é bem-vindo.</p>
+      </div>
+    </div>
+    <div class="sep"></div>
+    <div class="passo">
+      <div class="n">3</div>
+      <div>
+        <h2>Como a leitura é realizada?</h2>
+        <p>Eu analiso seu contexto de forma aprofundada e anoto todas as informações acessadas pelas cartas. Você receberá uma foto da tiragem e áudios com a interpretação detalhada.</p>
+      </div>
+    </div>
+    <div class="sep"></div>
+
+    <div class="duplo">
+      <div class="passo">
+        <div class="n">4</div>
         <div>
           <h2>Qual é o prazo de entrega?</h2>
-          <p>Sua leitura será enviada em <em>até 24 horas</em> após o envio do comprovante de pagamento.</p>
+          <p>Sua leitura será enviada em <strong>até 24 horas</strong> após o envio do comprovante de pagamento.</p>
         </div>
-      </li>
-      <li class="passo">
-        <div class="num">5</div>
+      </div>
+      <div class="vline"></div>
+      <div class="passo">
+        <div class="n">5</div>
         <div>
           <h2>Preciso estar online?</h2>
           <p>Não é necessário. Você poderá ouvir os áudios com tranquilidade, no momento que preferir.</p>
         </div>
-      </li>
-    </ol>
+      </div>
+    </div>
   </div>
 
-  <div class="fecho"><i></i><svg width="34" height="34" viewBox="-31 -31 62 62"><use href="#estrela8"/></svg><i></i></div>
+  <div class="orn fecho"><i></i><svg width="30" height="30" viewBox="-31 -31 62 62"><use href="#estrela8"/></svg><i></i></div>
 </div>
 </body>
 </html>
