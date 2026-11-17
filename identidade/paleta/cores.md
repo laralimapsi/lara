@@ -11,8 +11,17 @@
 ## Cores de apoio
 | Cor | HEX | RGB | Uso |
 |---|---|---|---|
-| Dourado Vela | #D4B06A | 212, 176, 106 | Estrelas, filetes, detalhes e títulos sobre fundos escuros |
+| Dourado Metálico | #C9A45F (cor base) | 201, 164, 95 | Folha de ouro: estrelas, filetes e títulos sobre fundos escuros |
 | Marfim | #F4EBDA | 244, 235, 218 | Textos sobre fundos escuros e áreas de respiro no fundo claro |
+
+### Como fazer o efeito metálico
+Use um degradê com estas 4 cores (do brilho para a sombra):
+`#F6E7B4` → `#E2C27C` → `#C9A45F` → `#8C6A32`
+
+- Em títulos: degradê vertical (de cima para baixo), começando no brilho e terminando na sombra.
+- Em formas e estrelas: degradê na diagonal, alternando brilho e sombra para parecer folha de ouro.
+- Quando não der para usar degradê (ex.: texto pequeno), use a cor base `#C9A45F`.
+- No Canva: selecione o elemento → Cor → "Degradê" e insira os códigos acima; ou use um elemento/textura de "gold foil".
 
 ## Proporções
 - Modo claro (catálogo): Pergaminho 60% · Roxo 25% · Verde 10% · Marfim 5%
