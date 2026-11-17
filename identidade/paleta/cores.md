@@ -11,27 +11,24 @@
 ## Cores de apoio
 | Cor | HEX | RGB | Uso |
 |---|---|---|---|
-| Dourado Vela | #D4B06A | 212, 176, 106 | Estrelas, filetes e títulos em fundo escuro |
-| Marfim | #F4EBDA | 244, 235, 218 | Textos sobre fundos escuros |
-| Musgo | #556B47 | 85, 107, 71 | Folhas, ícones e detalhes naturais |
-| Bronze | #9C7444 | 156, 116, 68 | Estrelas e filetes sobre fundo claro |
-| Café | #4A3426 | 74, 52, 38 | Textos sobre o pergaminho |
+| Dourado Vela | #D4B06A | 212, 176, 106 | Estrelas, filetes, detalhes e títulos sobre fundos escuros |
+| Marfim | #F4EBDA | 244, 235, 218 | Textos sobre fundos escuros e áreas de respiro no fundo claro |
 
 ## Proporções
-- Modo claro (catálogo): Pergaminho 60% · Roxo 25% · Verde 10% · Bronze 5%
-- Modo escuro (capas e destaques): Roxo 60% · Marfim 25% · Dourado 10% · Musgo 5%
+- Modo claro (catálogo): Pergaminho 60% · Roxo 25% · Verde 10% · Marfim 5%
+- Modo escuro (capas e destaques): Roxo 60% · Marfim 25% · Dourado 10% · Verde 5%
 
 ## Combinações aprovadas (contraste)
 - Marfim sobre Roxo Ameixa — 11,8 : 1
 - Dourado sobre Roxo Ameixa — 6,8 : 1
 - Dourado sobre Verde Floresta — 7,6 : 1
 - Marfim sobre Verde Floresta — 13,2 : 1
-- Roxo sobre Pergaminho — 8,1 : 1
-- Café sobre Pergaminho — 6,7 : 1
 - Marfim sobre Azul-Petróleo — 7,6 : 1
+- Roxo sobre Pergaminho — 8,1 : 1
+- Verde sobre Pergaminho — 9,1 : 1
 
 ## Evitar
-- Dourado sobre o pergaminho (1,2 : 1): no fundo claro, estrelas e filetes vão em Bronze.
+- Dourado sobre fundo claro (pergaminho ou marfim): some. No fundo claro, estrelas e filetes vão em roxo ou verde.
 - Verde, roxo e petróleo entre si como texto e fundo: sobre eles, use Marfim ou Dourado.
-- Musgo em textos sobre o verde escuro (2,7 : 1): ele é para folhas e ícones, de preferência no fundo claro.
+- Marfim em textos sobre o pergaminho: no fundo claro, ele serve só como área de respiro.
 - As quatro cores fortes na mesma arte: uma principal + no máximo uma secundária.
