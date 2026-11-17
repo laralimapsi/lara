@@ -25,14 +25,17 @@ Use um degradê com estas 4 cores (do brilho para a sombra):
 
 ## Proporções
 - Modo claro (catálogo): Pergaminho 60% · Roxo 25% · Verde 10% · Marfim 5%
-- Modo escuro (capas e destaques): Roxo 60% · Marfim 25% · Dourado 10% · Verde 5%
+- Modo roxo (capas e destaques): Roxo 60% · Marfim 25% · Dourado 10% · Verde 5%
+- Modo petróleo (destaques e stories): Azul-Petróleo 60% · Marfim 25% · Dourado 10% · Roxo 5%
 
 ## Combinações aprovadas (contraste)
 - Marfim sobre Roxo Ameixa — 11,8 : 1
-- Dourado sobre Roxo Ameixa — 6,8 : 1
-- Dourado sobre Verde Floresta — 7,6 : 1
+- Dourado sobre Roxo Ameixa — 6,0 : 1
+- Dourado sobre Verde Floresta — 6,7 : 1
 - Marfim sobre Verde Floresta — 13,2 : 1
 - Marfim sobre Azul-Petróleo — 7,6 : 1
+- Dourado sobre Azul-Petróleo — 3,8 : 1 (só em títulos e ornamentos; use os tons claros do degradê)
+- Azul-Petróleo sobre Pergaminho — 5,2 : 1
 - Roxo sobre Pergaminho — 8,1 : 1
 - Verde sobre Pergaminho — 9,1 : 1
 
