@@ -7,7 +7,7 @@
 <style>
   :root{
     --roxo:#3B2340; --verde:#11281A; --petroleo:#2E4F4A;
-    --perg:#D6C2AA; --ouro:#CFAA63; --metal:linear-gradient(135deg,#BA9653 0%,#CFAA63 30%,#E3C88C 50%,#CFAA63 70%,#BA9653 100%); --velho:linear-gradient(135deg,#654E1F 0%,#7A6026 30%,#9A7D3C 50%,#7A6026 70%,#654E1F 100%); --linho:#F4EBDA; --tinta:#3B2340;
+    --perg:#D6C2AA; --ouro:#CFAA63; --metal:linear-gradient(135deg,#BA9653 0%,#CFAA63 30%,#E3C88C 50%,#CFAA63 70%,#BA9653 100%); --velho:linear-gradient(135deg,#654E1F 0%,#7A6026 30%,#9A7D3C 50%,#7A6026 70%,#654E1F 100%); --linho:#D6C2AA; --tinta:#3B2340;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#111;width:1080px}
@@ -69,7 +69,7 @@
   .ap .lin span{display:block;margin-top:4px;font-size:15px}
   .ap em{margin-top:8px !important}
   .ap small{display:block;font-size:12px;letter-spacing:.08em;color:rgba(244,235,218,.6);margin-top:10px}
-  .tres{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .tres{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   .ap3{border-radius:14px;overflow:hidden;background:rgba(244,235,218,.06);border:1px solid rgba(212,176,106,.35)}
   .ap3 .cor{height:62px}
   .ap3 .tx{padding:12px 16px 14px}
@@ -96,14 +96,14 @@
   .sec{position:absolute;left:72px;right:72px}
   .sec h4{font-size:14px;color:var(--roxo);display:flex;align-items:center;gap:16px;margin-bottom:16px}
   .sec h4 i{flex:1;height:1px;background:linear-gradient(90deg,rgba(59,35,64,.45),transparent)}
-  .prop{display:flex;height:64px;border-radius:10px;overflow:hidden;border:1px solid rgba(42,24,36,.15)}
+  .prop{display:flex;height:52px;border-radius:10px;overflow:hidden;border:1px solid rgba(42,24,36,.15)}
   .prop div{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;letter-spacing:.04em;white-space:nowrap}
-  .modo{margin-bottom:20px !important;display:grid;grid-template-columns:205px 1fr;align-items:center;column-gap:18px;margin-bottom:14px}
+  .modo{margin-bottom:12px !important;display:grid;grid-template-columns:205px 1fr;align-items:center;column-gap:18px;margin-bottom:14px}
   .modo p{font-size:14.5px;line-height:1.4;white-space:nowrap}
   .modo p b{display:block;font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:450;font-size:22px;color:var(--roxo)}
 
   .combos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 16px}
-  .cb{border-radius:12px;height:118px;padding:14px 18px 12px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(42,24,36,.12)}
+  .cb{border-radius:12px;height:110px;padding:14px 18px 12px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(42,24,36,.12)}
   .cb{position:relative}
   .cb svg.ve{position:absolute;top:14px;right:16px}
   .cb .t + svg.ve + .d::before{content:"";display:block;width:70px;height:1.4px;margin:-10px 0 14px;background:linear-gradient(90deg,#7A6026,#9A7D3C,rgba(122,96,38,0))}
@@ -112,7 +112,7 @@
   .cb .d b{font-weight:600}
   .ok{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;padding:3px 8px;border-radius:20px;margin-left:6px;vertical-align:1px}
 
-  .evitar{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .evitar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
   .ev{display:flex;align-items:center;gap:16px;font-size:15px;line-height:1.35}
   .ev .x{flex:none;width:84px;height:60px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:28px;border:1px solid rgba(42,24,36,.12);position:relative}
   .ev .x::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 48%,rgba(140,30,30,.7) 49%,rgba(140,30,30,.7) 51%,transparent 52%)}
@@ -147,7 +147,7 @@
     <div class="orn"><i></i><svg width="46" height="46" viewBox="-31 -31 62 62"><use href="#estrelaOuro"/></svg><i></i></div>
     <div class="eyebrow caps metal" style="margin-top:18px">Identidade visual · Lara Oraculista</div>
     <h1 class="tit">Paleta de cores</h1>
-    <div class="sub">Quatro cores principais e três cores de apoio.</div>
+    <div class="sub">Quatro cores principais e dois dourados de apoio.</div>
   </div>
 
   <div class="principais">
@@ -159,7 +159,7 @@
         <div class="sig">Crescimento, natureza e cura</div><div class="rgb">RGB 17 · 40 · 26 &nbsp;—&nbsp; SECUNDÁRIA</div></div></div>
     <div class="card"><div class="cor" style="background:#D6C2AA"></div>
       <div class="info"><h3>Pergaminho</h3><div class="hex">#D6C2AA</div>
-        <div class="sig">Equilíbrio, verdade e aterramento</div><div class="rgb">RGB 214 · 194 · 170 &nbsp;—&nbsp; FUNDO CLARO</div></div></div>
+        <div class="sig">Equilíbrio, verdade e aterramento</div><div class="rgb">RGB 214 · 194 · 170 &nbsp;—&nbsp; FUNDO CLARO E TEXTOS</div></div></div>
     <div class="card"><div class="cor" style="background:#2E4F4A"></div>
       <div class="info"><h3>Azul-Petróleo</h3><div class="hex">#2E4F4A</div>
         <div class="sig">Clareza, profundidade e lealdade</div><div class="rgb">RGB 46 · 79 · 74 &nbsp;—&nbsp; SECUNDÁRIA</div></div></div>
@@ -174,8 +174,6 @@
       <div class="ap3"><div class="cor" style="background:var(--velho)"></div>
         <div class="tx"><b style="color:#B59A5E">Dourado Velho</b><span>#7A6026</span><em>Para o modo claro: estrelas, filetes e títulos no pergaminho</em>
         <div class="stops"><i style="background:#9A7D3C"></i><i style="background:#7A6026"></i><i style="background:#654E1F"></i><small>9A7D3C · 7A6026 · 654E1F</small></div></div></div>
-      <div class="ap3"><div class="cor" style="background:#F4EBDA"></div>
-        <div class="tx"><b>Marfim</b><span>#F4EBDA</span><em>Textos sobre fundos escuros e áreas de respiro no fundo claro</em><small>RGB 244 · 235 · 218</small></div></div>
     </div>
   </div>
   <div class="pe caps">Paleta · 01 / 02</div>
@@ -189,59 +187,67 @@
     <div class="orn"><i></i><svg width="30" height="30" viewBox="-31 -31 62 62"><use href="#estrelaVelho"/></svg><i></i></div>
   </div>
 
-  <div class="sec" style="top:270px">
+  <div class="sec" style="top:262px">
     <h4 class="caps"><span>Proporção por arte</span><i></i></h4>
     <div class="modo">
       <p><b>Modo claro</b>Catálogo de leituras.<br>Dourado Velho 10% · Verde 5%</p>
       <div class="prop">
         <div style="flex:60;background:#D6C2AA;color:#3B2340">PERGAMINHO · 60%</div>
-        <div style="flex:25;background:#3B2340;color:#F4EBDA">ROXO · 25%</div>
-        <div style="flex:10;background:var(--velho);color:#F4EBDA">10%</div>
+        <div style="flex:25;background:#3B2340;color:#D6C2AA">ROXO · 25%</div>
+        <div style="flex:10;background:var(--velho);color:#D6C2AA">10%</div>
         <div style="flex:5;background:#11281A"></div>
       </div>
     </div>
     <div class="modo">
       <p><b>Modo roxo</b>Capas e destaques.<br>Dourado 10% · Verde 5%</p>
       <div class="prop">
-        <div style="flex:60;background:#3B2340;color:#F4EBDA">ROXO · 60%</div>
-        <div style="flex:25;background:#F4EBDA;color:#3B2340">MARFIM · 25%</div>
+        <div style="flex:60;background:#3B2340;color:#D6C2AA">ROXO · 60%</div>
+        <div style="flex:25;background:#D6C2AA;color:#3B2340">PERGAMINHO · 25%</div>
         <div style="flex:10;background:var(--metal);color:#2A1A10">10%</div>
         <div style="flex:5;background:#11281A"></div>
       </div>
     </div>
     <div class="modo">
-      <p><b>Modo petróleo</b>Destaques e stories.<br>Dourado 10% · Roxo 5%</p>
+      <p><b>Modo verde</b>Posts e destaques.<br>Dourado 10% · Roxo 5%</p>
       <div class="prop">
-        <div style="flex:60;background:#2E4F4A;color:#F4EBDA">AZUL-PETRÓLEO · 60%</div>
-        <div style="flex:25;background:#F4EBDA;color:#2E4F4A">MARFIM · 25%</div>
+        <div style="flex:60;background:#11281A;color:#D6C2AA">VERDE FLORESTA · 60%</div>
+        <div style="flex:25;background:#D6C2AA;color:#11281A">PERGAMINHO · 25%</div>
+        <div style="flex:10;background:var(--metal);color:#2A1A10">10%</div>
+        <div style="flex:5;background:#3B2340"></div>
+      </div>
+    </div>
+    <div class="modo">
+      <p><b>Modo petróleo</b>Stories e destaques.<br>Dourado 10% · Roxo 5%</p>
+      <div class="prop">
+        <div style="flex:60;background:#2E4F4A;color:#D6C2AA">AZUL-PETRÓLEO · 60%</div>
+        <div style="flex:25;background:#D6C2AA;color:#2E4F4A">PERGAMINHO · 25%</div>
         <div style="flex:10;background:var(--metal);color:#2A1A10">10%</div>
         <div style="flex:5;background:#3B2340"></div>
       </div>
     </div>
   </div>
 
-  <div class="sec" style="top:610px">
+  <div class="sec" style="top:672px">
     <h4 class="caps"><span>Combinações aprovadas</span><i></i></h4>
     <div class="combos">
-      <div class="cb" style="background:#3B2340;color:#F4EBDA"><div class="t">Leituras</div><div class="d"><b>Marfim</b> sobre Roxo Ameixa<span class="ok" style="background:#F4EBDA;color:#3B2340">11,8 : 1</span></div></div>
+      <div class="cb" style="background:#3B2340;color:#D6C2AA"><div class="t">Leituras</div><div class="d"><b>Pergaminho</b> sobre Roxo<span class="ok" style="background:#D6C2AA;color:#3B2340">8,1 : 1</span></div></div>
       <div class="cb" style="background:#3B2340;color:#D4B06B"><div class="t metal">Destino</div><div class="d"><b>Dourado</b> sobre Roxo Ameixa<span class="ok" style="background:var(--metal);color:#3B2340">6,4 : 1</span></div></div>
       <div class="cb" style="background:#D6C2AA;color:#3B2340"><div class="t">Conexão</div><svg class="ve" width="26" height="26" viewBox="-31 -31 62 62"><use href="#estrelaVelho"/></svg><div class="d"><b>Roxo</b> + Dourado Velho<span class="ok" style="background:#3B2340;color:#D6C2AA">8,1 : 1</span></div></div>
-      <div class="cb" style="background:#11281A;color:#F4EBDA"><div class="t">Cura</div><div class="d"><b>Marfim</b> sobre Verde Floresta<span class="ok" style="background:#F4EBDA;color:#11281A">13,2 : 1</span></div></div>
+      <div class="cb" style="background:#11281A;color:#D6C2AA"><div class="t">Cura</div><div class="d"><b>Pergaminho</b> sobre Verde<span class="ok" style="background:#D6C2AA;color:#11281A">9,1 : 1</span></div></div>
       <div class="cb" style="background:#11281A;color:#D4B06B"><div class="t metal">Natureza</div><div class="d"><b>Dourado</b> sobre Verde Floresta<span class="ok" style="background:var(--metal);color:#11281A">7,1 : 1</span></div></div>
       <div class="cb" style="background:#D6C2AA;color:#11281A"><div class="t">Intuição</div><svg class="ve" width="26" height="26" viewBox="-31 -31 62 62"><use href="#estrelaVelho"/></svg><div class="d"><b>Verde</b> + Dourado Velho<span class="ok" style="background:#11281A;color:#D6C2AA">9,1 : 1</span></div></div>
-      <div class="cb" style="background:#2E4F4A;color:#F4EBDA"><div class="t">Clareza</div><div class="d"><b>Marfim</b> sobre Azul-Petróleo<span class="ok" style="background:#F4EBDA;color:#2E4F4A">7,6 : 1</span></div></div>
+      <div class="cb" style="background:#2E4F4A;color:#D6C2AA"><div class="t">Clareza</div><div class="d"><b>Pergaminho</b> sobre Petróleo<span class="ok" style="background:#D6C2AA;color:#2E4F4A">5,2 : 1</span></div></div>
       <div class="cb" style="background:#2E4F4A;color:#D4B06B"><div class="t metal">Lealdade</div><div class="d"><b>Dourado</b> sobre Azul-Petróleo<span class="ok" style="background:var(--metal);color:#2E4F4A">4,1 : 1</span></div></div>
       <div class="cb" style="background:#D6C2AA;color:#2E4F4A"><div class="t">Profundidade</div><svg class="ve" width="26" height="26" viewBox="-31 -31 62 62"><use href="#estrelaVelho"/></svg><div class="d"><b>Petróleo</b> + Dourado Velho<span class="ok" style="background:#2E4F4A;color:#D6C2AA">5,2 : 1</span></div></div>
     </div>
   </div>
 
-  <div class="sec" style="top:1052px">
+  <div class="sec" style="top:1086px">
     <h4 class="caps"><span>Evitar</span><i></i></h4>
     <div class="evitar">
       <div class="ev"><div class="x" style="background:#D6C2AA"><span class="metal">Aa</span></div><div><b>Dourado Metálico no fundo claro.</b> Ele some no pergaminho; no modo claro, use sempre o Dourado Velho.</div></div>
-      <div class="ev"><div class="x" style="background:#11281A;color:#2E4F4A">Aa</div><div><b>Verde, roxo e petróleo entre si como texto e fundo.</b> Sobre eles, use Marfim ou Dourado.</div></div>
-      <div class="ev"><div class="x" style="background:#D6C2AA;color:#F4EBDA">Aa</div><div><b>Marfim em textos sobre o pergaminho.</b> No fundo claro, ele serve só como área de respiro.</div></div>
-      <div class="ev"><div class="x" style="background:linear-gradient(90deg,#3B2340 25%,#11281A 25% 50%,#2E4F4A 50% 75%,#D6C2AA 75%);color:#F4EBDA">Aa</div><div><b>As quatro cores fortes na mesma arte.</b> Escolha uma principal e, no máximo, uma secundária.</div></div>
+      <div class="ev"><div class="x" style="background:#11281A;color:#2E4F4A">Aa</div><div><b>Verde, roxo e petróleo entre si como texto e fundo.</b> Sobre eles, use Pergaminho ou Dourado.</div></div>
+      <div class="ev"><div class="x" style="background:linear-gradient(90deg,#3B2340 25%,#11281A 25% 50%,#2E4F4A 50% 75%,#D6C2AA 75%);color:#D6C2AA">Aa</div><div><b>As quatro cores fortes na mesma arte.</b> Escolha uma principal e, no máximo, uma secundária.</div></div>
     </div>
   </div>
   <div class="pe caps">Paleta · 02 / 02</div>
