@@ -7,19 +7,19 @@
 <style>
   :root{
     --roxo:#3B2340; --verde:#11281A; --petroleo:#2E4F4A;
-    --perg:#D6C2AA; --ouro:#CFAA63; --metal:linear-gradient(135deg,#BA9653 0%,#CFAA63 30%,#E3C88C 50%,#CFAA63 70%,#BA9653 100%); --velho:linear-gradient(135deg,#6E5523 0%,#85692B 30%,#A68844 50%,#85692B 70%,#6E5523 100%); --linho:#D6C2AA; --tinta:#3B2340;
+    --perg:#D6C2AA; --ouro:#B8924F; --metal:linear-gradient(135deg,#9E7B3E 0%,#B8924F 30%,#CDAE6E 50%,#B8924F 70%,#9E7B3E 100%); --velho:linear-gradient(135deg,#6E5523 0%,#85692B 30%,#A68844 50%,#85692B 70%,#6E5523 100%); --linho:#D6C2AA; --tinta:#3B2340;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#111;width:1080px}
   .pg{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'Noto Serif',serif}
   .tit{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:340;letter-spacing:-.015em;line-height:1}
   .caps{font-weight:500;text-transform:uppercase;letter-spacing:.24em}
-  .metal{background:linear-gradient(180deg,#E3C88C 0%,#D4B06B 45%,#C29E59 100%);-webkit-background-clip:text;background-clip:text;color:transparent !important}
+  .metal{background:linear-gradient(180deg,#CDAE6E 0%,#BF9A56 45%,#A98545 100%);-webkit-background-clip:text;background-clip:text;color:transparent !important}
   .velho{background:linear-gradient(180deg,#A08240 0%,#85692B 50%,#6E5523 100%);-webkit-background-clip:text;background-clip:text;color:transparent !important}
   .orn{display:flex;align-items:center;justify-content:center;gap:14px}
   .orn i{display:block;height:1.2px;width:130px}
-  .orn i:first-child{background:linear-gradient(90deg,transparent,#CFAA63)}
-  .orn i:last-child{background:linear-gradient(90deg,#CFAA63,transparent)}
+  .orn i:first-child{background:linear-gradient(90deg,transparent,#B8924F)}
+  .orn i:last-child{background:linear-gradient(90deg,#B8924F,transparent)}
 
   /* ---------- página 1: escura ---------- */
   .p1{color:var(--linho);
@@ -106,7 +106,7 @@
   .cb{border-radius:12px;height:150px;padding:14px 18px 12px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(42,24,36,.12)}
   .cb{position:relative}
   .cb svg.ve{position:absolute;top:14px;right:16px}
-  .cb.dk .t + svg.ve + .d::before{background:linear-gradient(90deg,#BA9653,#E3C88C,rgba(207,170,99,0)) !important}
+  .cb.dk .t + svg.ve + .d::before{background:linear-gradient(90deg,#9E7B3E,#CDAE6E,rgba(184,146,79,0)) !important}
   .cb .t + svg.ve + .d::before{content:"";display:block;width:70px;height:1.4px;margin:-4px 0 16px;background:linear-gradient(90deg,#85692B,#A68844,rgba(133,105,43,0))}
   .cb .t{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:360;font-size:36px;line-height:1}
   .cb .d{font-size:12.5px;letter-spacing:.04em;line-height:1.35}
@@ -123,7 +123,7 @@
 <body>
 <svg width="0" height="0" style="position:absolute">
   <defs>
-    <linearGradient id="gmetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C29E59"/><stop offset=".5" stop-color="#E3C88C"/><stop offset="1" stop-color="#C29E59"/></linearGradient>
+    <linearGradient id="gmetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A98545"/><stop offset=".5" stop-color="#CDAE6E"/><stop offset="1" stop-color="#A98545"/></linearGradient>
     <g id="estrelaOuro" fill="url(#gmetal)">
       <path d="M0-22 L2.2-4.2 L15.6-15.6 L4.2-2.2 L22 0 L4.2 2.2 L15.6 15.6 L2.2 4.2 L0 22 L-2.2 4.2 L-15.6 15.6 L-4.2 2.2 L-22 0 L-4.2-2.2 L-15.6-15.6 L-2.2-4.2Z"/>
       <path d="M0-30 L1.1-9 L0 0 L-1.1-9Z M0 30 L1.1 9 L0 0 L-1.1 9Z M-30 0 L-9 1.1 L0 0 L-9-1.1Z M30 0 L9 1.1 L0 0 L9-1.1Z"/>
@@ -170,8 +170,8 @@
     <div class="rot caps"><span>Dourados · somente elementos</span><i></i></div>
     <div class="tres">
       <div class="ap3"><div class="cor" style="background:var(--metal)"></div>
-        <div class="tx"><b>Dourado Metálico</b><span>#CFAA63</span><em>Só elementos, nos fundos escuros: estrelas, filetes, ícones e molduras</em>
-        <div class="stops"><i style="background:#E3C88C"></i><i style="background:#CFAA63"></i><i style="background:#BA9653"></i><small>E3C88C · CFAA63 · BA9653</small></div></div></div>
+        <div class="tx"><b>Dourado Metálico</b><span>#B8924F</span><em>Só elementos, nos fundos escuros: estrelas, filetes, ícones e molduras</em>
+        <div class="stops"><i style="background:#CDAE6E"></i><i style="background:#B8924F"></i><i style="background:#9E7B3E"></i><small>CDAE6E · B8924F · 9E7B3E</small></div></div></div>
       <div class="ap3"><div class="cor" style="background:var(--velho)"></div>
         <div class="tx"><b>Dourado Velho</b><span>#85692B</span><em>Só elementos, no modo claro: estrelas, filetes, ícones e molduras</em>
         <div class="stops"><i style="background:#A68844"></i><i style="background:#85692B"></i><i style="background:#6E5523"></i><small>A68844 · 85692B · 6E5523</small></div></div></div>

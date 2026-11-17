@@ -13,15 +13,15 @@
 
 | Cor | HEX | RGB | Uso |
 |---|---|---|---|
-| Dourado Metálico | #CFAA63 (cor base) | 207, 170, 99 | Só elementos (estrelas, filetes, ícones, molduras) nos fundos escuros |
+| Dourado Metálico | #B8924F (cor base) | 184, 146, 79 | Só elementos (estrelas, filetes, ícones, molduras) nos fundos escuros |
 | Dourado Velho | #85692B (cor base) | 133, 105, 43 | Só elementos (estrelas, filetes, ícones, molduras) no modo claro |
 
 ### Como fazer o efeito metálico (Dourado Metálico — fundos escuros)
 Degradê suave e homogêneo, com só 3 tons e um único brilho no centro:
-`#BA9653` (sombra) → `#CFAA63` (base) → `#E3C88C` (brilho) → `#CFAA63` → `#BA9653`
+`#9E7B3E` (sombra) → `#B8924F` (base) → `#CDAE6E` (brilho) → `#B8924F` → `#9E7B3E`
 
 - Em formas e estrelas: degradê diagonal, com o brilho no meio.
-- Quando não der para usar degradê (ex.: elementos muito finos), use a cor base `#CFAA63`.
+- Quando não der para usar degradê (ex.: elementos muito finos), use a cor base `#B8924F`.
 - No Canva: selecione o elemento → Cor → "Degradê" e insira os códigos acima.
 
 ### Dourado Velho (modo claro)
