@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Paleta de cores — Lara Oraculista</title>
+<link rel="stylesheet" href="../../artes/como-funcionam-as-leituras/fonts2/fonts.css">
+<style>
+  :root{
+    --roxo:#3B2340; --noite:#24152A; --verde:#45513A; --petroleo:#2E4F4A;
+    --perg:#D6C2AA; --areia:#B89B7C; --ouro:#C3A37F; --linho:#EFE5D8; --tinta:#2A1824;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#111;width:1080px}
+  .pg{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'Noto Serif',serif}
+  .tit{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:340;letter-spacing:-.015em;line-height:1}
+  .caps{font-weight:500;text-transform:uppercase;letter-spacing:.24em}
+  .orn{display:flex;align-items:center;justify-content:center;gap:14px}
+  .orn i{display:block;height:1.2px;width:130px}
+  .orn i:first-child{background:linear-gradient(90deg,transparent,var(--ouro))}
+  .orn i:last-child{background:linear-gradient(90deg,var(--ouro),transparent)}
+
+  /* ---------- página 1: escura ---------- */
+  .p1{color:var(--linho);
+    background:
+      radial-gradient(ellipse 60% 40% at 70% 18%, rgba(120,70,130,.35), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 20% 85%, rgba(90,50,100,.35), transparent 70%),
+      radial-gradient(ellipse 120% 100% at 50% 45%, #3B2340 0%, #2C1A32 55%, #1B0F20 100%)}
+  .ruido{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.35}
+  .p1 .cab{position:absolute;top:70px;left:0;right:0;text-align:center}
+  .p1 .eyebrow{font-size:14px;color:var(--ouro);margin-bottom:22px}
+  .p1 h1{font-size:92px;color:var(--linho)}
+  .p1 .sub{font-style:italic;font-size:22px;color:var(--perg);margin-top:16px;letter-spacing:.02em}
+
+  .principais{position:absolute;top:330px;left:72px;right:72px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .card{border-radius:14px;overflow:hidden;background:rgba(239,229,216,.06);border:1px solid rgba(195,163,127,.35)}
+  .card .cor{height:200px;position:relative}
+  .card .cor span{position:absolute;left:22px;bottom:16px;font-size:13px}
+  .card .info{padding:18px 22px 20px;display:grid;grid-template-columns:1fr auto;row-gap:6px}
+  .card h3{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:400;font-size:33px;color:var(--linho);letter-spacing:-.01em}
+  .card .hex{font-size:20px;font-weight:500;color:var(--ouro);letter-spacing:.06em;align-self:center}
+  .card .sig{grid-column:1/-1;font-style:italic;font-size:17px;color:var(--perg)}
+  .card .rgb{grid-column:1/-1;font-size:13px;color:rgba(239,229,216,.6);letter-spacing:.08em}
+
+  .apoio{position:absolute;top:1046px;left:72px;right:72px}
+  .apoio .rot{display:flex;align-items:center;gap:18px;font-size:13px;color:var(--ouro);margin-bottom:20px}
+  .apoio .rot i{flex:1;height:1px;background:linear-gradient(90deg,rgba(195,163,127,.6),transparent)}
+  .linha{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .mini .cor{height:92px;border-radius:12px;border:1px solid rgba(195,163,127,.35)}
+  .mini b{display:block;font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:400;font-size:21px;margin-top:12px;color:var(--linho)}
+  .mini small{display:block;font-size:14px;color:var(--ouro);letter-spacing:.06em;margin-top:3px}
+  .mini em{display:block;font-size:13px;color:rgba(239,229,216,.65);margin-top:4px;line-height:1.35}
+  .p1 .pe{position:absolute;bottom:44px;left:0;right:0;text-align:center;font-size:12px;color:rgba(195,163,127,.8)}
+
+  /* ---------- página 2: clara ---------- */
+  .p2{color:var(--tinta);
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 35%, rgba(244,234,222,.85), transparent 75%),
+      radial-gradient(ellipse 120% 100% at 50% 50%, #DCCAB3 0%, #D2BCA2 70%, #C4AB8E 100%)}
+  .p2 .cab{position:absolute;top:66px;left:0;right:0;text-align:center}
+  .p2 .eyebrow{font-size:14px;color:var(--verde);margin-bottom:18px}
+  .p2 h1{font-size:76px;color:var(--roxo)}
+  .p2 .orn{margin-top:20px}
+  .p2 .orn i:first-child{background:linear-gradient(90deg,transparent,#9C7C54)}
+  .p2 .orn i:last-child{background:linear-gradient(90deg,#9C7C54,transparent)}
+
+  .sec{position:absolute;left:72px;right:72px}
+  .sec h4{font-size:14px;color:var(--roxo);display:flex;align-items:center;gap:16px;margin-bottom:16px}
+  .sec h4 i{flex:1;height:1px;background:linear-gradient(90deg,rgba(59,35,64,.45),transparent)}
+  .prop{display:flex;height:64px;border-radius:10px;overflow:hidden;border:1px solid rgba(42,24,36,.15)}
+  .prop div{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;letter-spacing:.04em;white-space:nowrap}
+  .modo{margin-bottom:20px !important;display:grid;grid-template-columns:205px 1fr;align-items:center;column-gap:18px;margin-bottom:14px}
+  .modo p{font-size:14.5px;line-height:1.4;white-space:nowrap}
+  .modo p b{display:block;font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:450;font-size:22px;color:var(--roxo)}
+
+  .combos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .cb{border-radius:12px;height:168px;padding:20px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(42,24,36,.12)}
+  .cb .t{font-family:'Newsreader',serif;font-variation-settings:'opsz' 72;font-weight:360;font-size:36px;line-height:1}
+  .cb .d{font-size:12.5px;letter-spacing:.04em;line-height:1.35}
+  .cb .d b{font-weight:600}
+  .ok{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;padding:3px 8px;border-radius:20px;margin-left:6px;vertical-align:1px}
+
+  .evitar{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .ev{display:flex;align-items:center;gap:16px;font-size:15px;line-height:1.35}
+  .ev .x{flex:none;width:84px;height:60px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:28px;border:1px solid rgba(42,24,36,.12);position:relative}
+  .ev .x::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 48%,rgba(140,30,30,.7) 49%,rgba(140,30,30,.7) 51%,transparent 52%)}
+  .p2 .pe{position:absolute;bottom:44px;left:0;right:0;text-align:center;font-size:12px;color:rgba(42,24,36,.6)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="estrela8">
+      <path fill="currentColor" d="M0-22 L2.2-4.2 L15.6-15.6 L4.2-2.2 L22 0 L4.2 2.2 L15.6 15.6 L2.2 4.2 L0 22 L-2.2 4.2 L-15.6 15.6 L-4.2 2.2 L-22 0 L-4.2-2.2 L-15.6-15.6 L-2.2-4.2Z"/>
+      <path fill="currentColor" d="M0-30 L1.1-9 L0 0 L-1.1-9Z M0 30 L1.1 9 L0 0 L-1.1 9Z M-30 0 L-9 1.1 L0 0 L-9-1.1Z M30 0 L9 1.1 L0 0 L9-1.1Z"/>
+    </g>
+    <filter id="ruido"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="5"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+</svg>
+
+<!-- ================= PÁGINA 1 ================= -->
+<section class="pg p1" id="p1">
+  <svg class="ruido" width="1080" height="1350"><rect width="100%" height="100%" filter="url(#ruido)"/></svg>
+  <div class="cab">
+    <div class="orn" style="color:#C3A37F"><i></i><svg width="44" height="44" viewBox="-31 -31 62 62"><use href="#estrela8"/></svg><i></i></div>
+    <div class="eyebrow caps" style="margin-top:18px">Identidade visual · Lara Oraculista</div>
+    <h1 class="tit">Paleta de cores</h1>
+    <div class="sub">Quatro cores principais, um dourado e quatro tons de apoio.</div>
+  </div>
+
+  <div class="principais">
+    <div class="card"><div class="cor" style="background:#3B2340"></div>
+      <div class="info"><h3>Roxo Ameixa</h3><div class="hex">#3B2340</div>
+        <div class="sig">Mistério, magia e intuição</div><div class="rgb">RGB 59 · 35 · 64 &nbsp;—&nbsp; COR PRINCIPAL</div></div></div>
+    <div class="card"><div class="cor" style="background:#45513A"></div>
+      <div class="info"><h3>Verde Floresta</h3><div class="hex">#45513A</div>
+        <div class="sig">Crescimento, natureza e cura</div><div class="rgb">RGB 69 · 81 · 58 &nbsp;—&nbsp; SECUNDÁRIA</div></div></div>
+    <div class="card"><div class="cor" style="background:#D6C2AA"></div>
+      <div class="info"><h3>Pergaminho</h3><div class="hex">#D6C2AA</div>
+        <div class="sig">Equilíbrio, verdade e aterramento</div><div class="rgb">RGB 214 · 194 · 170 &nbsp;—&nbsp; FUNDO CLARO</div></div></div>
+    <div class="card"><div class="cor" style="background:#2E4F4A"></div>
+      <div class="info"><h3>Azul-Petróleo</h3><div class="hex">#2E4F4A</div>
+        <div class="sig">Clareza, profundidade e lealdade</div><div class="rgb">RGB 46 · 79 · 74 &nbsp;—&nbsp; SECUNDÁRIA</div></div></div>
+  </div>
+
+  <div class="apoio">
+    <div class="rot caps"><span>Acento &amp; tons de apoio</span><i></i></div>
+    <div class="linha">
+      <div class="mini"><div class="cor" style="background:linear-gradient(135deg,#D6BC97,#C3A37F 45%,#A88760)"></div><b>Dourado Antigo</b><small>#C3A37F</small><em>Estrelas, filetes e títulos em fundo escuro</em></div>
+      <div class="mini"><div class="cor" style="background:#24152A"></div><b>Roxo Noite</b><small>#24152A</small><em>Fundos profundos e vinhetas</em></div>
+      <div class="mini"><div class="cor" style="background:#EFE5D8"></div><b>Linho</b><small>#EFE5D8</small><em>Texto sobre fundos escuros</em></div>
+      <div class="mini"><div class="cor" style="background:#2A1824"></div><b>Tinta</b><small>#2A1824</small><em>Texto sobre pergaminho</em></div>
+      <div class="mini"><div class="cor" style="background:#B89B7C"></div><b>Bege Areia</b><small>#B89B7C</small><em>Texturas, molduras e áreas de apoio</em></div>
+    </div>
+  </div>
+  <div class="pe caps">Paleta · 01 / 02</div>
+</section>
+
+<!-- ================= PÁGINA 2 ================= -->
+<section class="pg p2" id="p2">
+  <div class="cab">
+    <div class="eyebrow caps">Paleta de cores · Como usar</div>
+    <h1 class="tit">Proporções &amp; combinações</h1>
+    <div class="orn" style="color:#9C7C54"><i></i><svg width="30" height="30" viewBox="-31 -31 62 62"><use href="#estrela8"/></svg><i></i></div>
+  </div>
+
+  <div class="sec" style="top:290px">
+    <h4 class="caps"><span>Proporção por arte</span><i></i></h4>
+    <div class="modo">
+      <p><b>Modo claro</b>Catálogo de leituras.<br>Verde 10% · Dourado 5%</p>
+      <div class="prop">
+        <div style="flex:60;background:#D6C2AA;color:#2A1824">PERGAMINHO · 60%</div>
+        <div style="flex:25;background:#3B2340;color:#EFE5D8">ROXO · 25%</div>
+        <div style="flex:10;background:#45513A;color:#EFE5D8">10%</div>
+        <div style="flex:5;background:#C3A37F"></div>
+      </div>
+    </div>
+    <div class="modo">
+      <p><b>Modo escuro</b>Capas e destaques.<br>Ouro 10% · Petróleo 5%</p>
+      <div class="prop">
+        <div style="flex:60;background:#3B2340;color:#EFE5D8">ROXO · 60%</div>
+        <div style="flex:25;background:#EFE5D8;color:#2A1824">LINHO · 25%</div>
+        <div style="flex:10;background:#C3A37F;color:#24152A">10%</div>
+        <div style="flex:5;background:#2E4F4A"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" style="top:565px">
+    <h4 class="caps"><span>Combinações aprovadas</span><i></i></h4>
+    <div class="combos">
+      <div class="cb" style="background:#3B2340;color:#EFE5D8"><div class="t">Leituras</div><div class="d"><b>Linho</b> sobre Roxo Ameixa<span class="ok" style="background:#EFE5D8;color:#3B2340">11,2 : 1</span></div></div>
+      <div class="cb" style="background:#24152A;color:#C3A37F"><div class="t">Destino</div><div class="d"><b>Dourado</b> sobre Roxo Noite<span class="ok" style="background:#C3A37F;color:#24152A">7,3 : 1</span></div></div>
+      <div class="cb" style="background:#D6C2AA;color:#2A1824"><div class="t">Intuição</div><div class="d"><b>Tinta</b> sobre Pergaminho<span class="ok" style="background:#2A1824;color:#D6C2AA">9,7 : 1</span></div></div>
+      <div class="cb" style="background:#D6C2AA;color:#3B2340"><div class="t">Conexão</div><div class="d"><b>Roxo</b> sobre Pergaminho<span class="ok" style="background:#3B2340;color:#D6C2AA">8,1 : 1</span></div></div>
+      <div class="cb" style="background:#45513A;color:#EFE5D8"><div class="t">Cura</div><div class="d"><b>Linho</b> sobre Verde Floresta<span class="ok" style="background:#EFE5D8;color:#45513A">6,8 : 1</span></div></div>
+      <div class="cb" style="background:#2E4F4A;color:#EFE5D8"><div class="t">Clareza</div><div class="d"><b>Linho</b> sobre Azul-Petróleo<span class="ok" style="background:#EFE5D8;color:#2E4F4A">7,2 : 1</span></div></div>
+    </div>
+  </div>
+
+  <div class="sec" style="top:1020px">
+    <h4 class="caps"><span>Evitar</span><i></i></h4>
+    <div class="evitar">
+      <div class="ev"><div class="x" style="background:#D6C2AA;color:#C3A37F">Aa</div><div><b>Dourado em textos sobre fundo claro.</b> No pergaminho, use o dourado só em estrelas e filetes.</div></div>
+      <div class="ev"><div class="x" style="background:#45513A;color:#2E4F4A">Aa</div><div><b>Verde com petróleo como texto e fundo.</b> São escuros demais juntos; um deles sempre leva Linho.</div></div>
+      <div class="ev"><div class="x" style="background:#D6C2AA;color:#B89B7C">Aa</div><div><b>Bege Areia em textos.</b> Ele é cor de apoio para texturas e molduras.</div></div>
+      <div class="ev"><div class="x" style="background:linear-gradient(90deg,#3B2340 25%,#45513A 25% 50%,#2E4F4A 50% 75%,#B89B7C 75%);color:#EFE5D8">Aa</div><div><b>As quatro cores fortes na mesma arte.</b> Escolha uma principal e, no máximo, uma secundária.</div></div>
+    </div>
+  </div>
+  <div class="pe caps">Paleta · 02 / 02</div>
+</section>
+</body>
+</html>
