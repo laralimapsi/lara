@@ -4,7 +4,8 @@ import gerar
 HERE = os.path.dirname(os.path.abspath(__file__))
 CATS = [('estrelas', 'Estrelas com brilho', 'Folha de ouro com luz suave, para céus e destaques.', 3),
         ('misticos', 'Símbolos místicos', 'Luas, olho, talismãs e ornamentos em traço dourado.', 3),
-        ('colagem', 'Colagem vintage', 'Selos, etiquetas, papel rasgado e molduras com textura de papel.', 3)]
+        ('colagem', 'Colagem vintage', 'Selos, etiquetas, papel rasgado e molduras com textura de papel.', 3),
+        ('molduras', 'Portais & molduras', 'Estruturas douradas para emoldurar títulos, nomes e preços.', 3)]
 CSS = '''*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;background:#111}
 .pg{position:relative;width:1080px;height:1350px;overflow:hidden;color:#D6C2AA;font-family:'EB Garamond',serif;
 background:radial-gradient(ellipse 60% 40% at 70% 15%,rgba(120,70,130,.35),transparent 70%),radial-gradient(ellipse 120% 100% at 50% 45%,#3B2340 0%,#2C1A32 55%,#1B0F20 100%)}
@@ -27,7 +28,7 @@ def page(i, cat, t, sub, cols):
         fg = '#3B2340' if e['bg'] == gerar.PERG else '#D6C2AA'
         cards += (f'<div class="card" style="background:{e["bg"]};color:{fg}"><div class="art"><img src="svg/{v}/{e["key"]}.svg"></div>'
                   f'<h3>{e["nome"]}</h3><p>{e["desc"]}</p></div>')
-    return (f'<section class="pg" id="p{i+1}"><div class="cab"><div class="ey">Elementos · {i+1} de 3</div><h1>{t}</h1><p>{sub}</p></div>'
+    return (f'<section class="pg" id="p{i+1}"><div class="cab"><div class="ey">Elementos · {i+1} de 4</div><h1>{t}</h1><p>{sub}</p></div>'
             f'<div class="grid" style="grid-template-columns:repeat({cols},1fr);grid-template-rows:repeat({rows},1fr)">{cards}</div>'
             f'<div class="pe">Lara Oraculista · Elementos</div></section>')
 open(os.path.join(HERE, 'catalogo.html'), 'w').write('<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><title>Elementos v2</title>'

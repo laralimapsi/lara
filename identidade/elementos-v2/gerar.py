@@ -503,6 +503,21 @@ def svg(e, uid='x'):
     if e['paper']: wrap = f'<g filter="url(#{uid}papel)">{wrap}</g>'
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}"><defs>{defs(e, uid)}</defs>{wrap}</svg>'
 
+# ================= MOLDURAS (da primeira biblioteca, com o novo acabamento) =================
+def _importar_molduras():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('v1', os.path.join(HERE, '..', 'elementos', 'gerar.py'))
+    v1 = importlib.util.module_from_spec(spec); spec.loader.exec_module(v1)
+    fundos = [PERG, PETRO, ROXO, VERDE, PERG, PETRO]
+    for i, e in enumerate([e for e in v1.E if e['cat'] == 'molduras']):
+        def fn(f0=e['fn']):
+            return (f0().replace('class="fl"', 'fill="url(#ouro)"')
+                    .replace('class="ln"', 'fill="none" stroke="url(#ouro)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"'))
+        bg = fundos[i % len(fundos)]
+        E.append(dict(key=e['key'], nome=e['nome'], desc=e['desc'], vb=e['vb'], cat='molduras', bg=bg,
+                      gold='metalico', glow=2, foil=True, paper=False, fn=fn))
+_importar_molduras()
+
 if __name__ == '__main__':
     import copy
     for v in ('metalico', 'velho'): os.makedirs(os.path.join(HERE, 'svg', v), exist_ok=True)
