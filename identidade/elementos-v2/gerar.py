@@ -35,15 +35,14 @@ def ring(cx, cy, r, sw=1.4, dash=None, stroke='url(#ouro)'):
     return f'<circle cx="{f(cx)}" cy="{f(cy)}" r="{f(r)}" fill="none" stroke="{stroke}" stroke-width="{sw}" stroke-linecap="round"{d}/>'
 
 def crescent(cx, cy, r, k=.78, rot=0, fill='url(#ouro)'):
-    """lua crescente: círculo menos círculo deslocado."""
-    r2 = r*k; off = r*.42
-    a = math.radians(rot)
+    """lua crescente: círculo com máscara recortando um círculo deslocado."""
+    r2 = r*k; off = r*.42; a = math.radians(rot)
     ox, oy = off*math.cos(a), off*math.sin(a)
-    # interseções aproximadas via arcos
-    return (f'<path fill="{fill}" fill-rule="evenodd" d="M{pt(cx-r, cy)}a{f(r)} {f(r)} 0 1 0 {f(2*r)} 0a{f(r)} {f(r)} 0 1 0 {f(-2*r)} 0Z'
-            f'M{pt(cx+ox-r2, cy+oy)}a{f(r2)} {f(r2)} 0 1 0 {f(2*r2)} 0a{f(r2)} {f(r2)} 0 1 0 {f(-2*r2)} 0Z" '
-            f'clip-path="url(#cl{abs(hash((cx, cy, r))) % 10**6})"/>'
-            f'<clipPath id="cl{abs(hash((cx, cy, r))) % 10**6}"><circle cx="{f(cx)}" cy="{f(cy)}" r="{f(r)}"/></clipPath>')
+    mid = f'mk{abs(hash((round(cx, 2), round(cy, 2), round(r, 2), rot))) % 10**7}'
+    return (f'<mask id="{mid}" maskUnits="userSpaceOnUse" x="{f(cx-r-2)}" y="{f(cy-r-2)}" width="{f(2*r+4)}" height="{f(2*r+4)}">'
+            f'<circle cx="{f(cx)}" cy="{f(cy)}" r="{f(r)}" fill="#fff"/>'
+            f'<circle cx="{f(cx+ox)}" cy="{f(cy+oy)}" r="{f(r2)}" fill="#000"/></mask>'
+            f'<circle cx="{f(cx)}" cy="{f(cy)}" r="{f(r)}" fill="{fill}" mask="url(#{mid})"/>')
 
 def faceted(cx, cy, R, r, n=8, rot=-90, light='#DCC08A', dark='#8E6E36'):
     out = ''
@@ -525,6 +524,17 @@ def _importar_v1():
 _importar_v1()
 # peças de colagem retiradas da biblioteca
 E[:] = [e for e in E if e['cat'] != 'colagem']
+
+# ---------------- seleção final (escolhidos pela Lara) ----------------
+FINAL = {
+    'ceu': ['brilho', 'explosao', 'vintage', 'celeste', 'sol-lua-v2', 'arco-raios', 'lua-orbita', 'luas-gemeas', 'lua-ramo'],
+    'molduras': ['portal', 'guirlanda', 'moldura-taro', 'rosa-dos-ventos', 'talisma', 'divisor-botanico'],
+}
+_por_key = {e['key']: e for e in E}
+E[:] = []
+for cat, keys in FINAL.items():
+    for k in keys:
+        e = dict(_por_key[k]); e['cat'] = cat; E.append(e)
 
 if __name__ == '__main__':
     import copy
