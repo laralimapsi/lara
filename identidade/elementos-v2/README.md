@@ -1,12 +1,9 @@
-# Elementos v2 — Lara Oraculista
+# Elementos — Lara Oraculista (biblioteca oficial)
 
-Estrelas com brilho, símbolos místicos e peças de colagem vintage, no estilo das referências (folha de ouro com textura, brilho suave, papel com textura).
+30 elementos dourados com textura de folha de ouro e brilho suave.
 
-- Catálogo: `catalogo-1-estrelas.png`, `catalogo-2-misticos.png`, `catalogo-3-colagem.png`, `catalogo-4-molduras.png`
-- Molduras (portal em arco, guirlanda, moldura de carta, rosa dos ventos, cantoneira de samambaia, selo celeste) vieram da primeira biblioteca, agora com o acabamento de folha de ouro
-- `png/metalico/` → estrelas e símbolos para fundos roxo, verde e petróleo + peças de colagem
-- `png/velho/` → estrelas e símbolos para o fundo pergaminho + peças de colagem claras
+- Catálogo: `catalogo-1-estrelas.png`, `catalogo-2-sol-luas-simbolos.png`, `catalogo-3-molduras.png`, `catalogo-4-adornos.png`
+- `png/metalico/` → para fundos roxo, verde e petróleo (Dourado Metálico)
+- `png/velho/` → para o fundo pergaminho (Dourado Velho)
 - `svg/` → mesmos elementos em vetor
 - PNGs com fundo transparente, 1200 px no lado maior
-
-Folhagens realistas e em aquarela ficam para uma próxima etapa.

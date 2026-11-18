@@ -3,9 +3,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gerar
 HERE = os.path.dirname(os.path.abspath(__file__))
 CATS = [('estrelas', 'Estrelas com brilho', 'Folha de ouro com luz suave, para céus e destaques.', 3),
-        ('misticos', 'Símbolos místicos', 'Luas, olho, talismãs e ornamentos em traço dourado.', 3),
-        ('colagem', 'Colagem vintage', 'Selos, etiquetas, papel rasgado e molduras com textura de papel.', 3),
-        ('molduras', 'Portais & molduras', 'Estruturas douradas para emoldurar títulos, nomes e preços.', 3)]
+        ('misticos', 'Sol, luas & símbolos', 'Luas, sol, olho e talismãs em traço dourado.', 3),
+        ('molduras', 'Portais & molduras', 'Estruturas douradas para emoldurar títulos, nomes e preços.', 3),
+        ('adornos', 'Enfeites & adornos', 'Divisores, luas e poeira de estrelas para completar a arte.', 2)]
 CSS = '''*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;background:#111}
 .pg{position:relative;width:1080px;height:1350px;overflow:hidden;color:#D6C2AA;font-family:'EB Garamond',serif;
 background:radial-gradient(ellipse 60% 40% at 70% 15%,rgba(120,70,130,.35),transparent 70%),radial-gradient(ellipse 120% 100% at 50% 45%,#3B2340 0%,#2C1A32 55%,#1B0F20 100%)}
@@ -24,7 +24,7 @@ def page(i, cat, t, sub, cols):
     els = [e for e in gerar.E if e['cat'] == cat]; rows = -(-len(els)//cols)
     cards = ''
     for e in els:
-        v = e['gold'] if cat == 'colagem' else ('velho' if e['bg'] == gerar.PERG else 'metalico')
+        v = 'velho' if e['bg'] == gerar.PERG else 'metalico'
         fg = '#3B2340' if e['bg'] == gerar.PERG else '#D6C2AA'
         cards += (f'<div class="card" style="background:{e["bg"]};color:{fg}"><div class="art"><img src="svg/{v}/{e["key"]}.svg"></div>'
                   f'<h3>{e["nome"]}</h3><p>{e["desc"]}</p></div>')

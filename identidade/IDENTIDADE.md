@@ -85,17 +85,16 @@ Cinzel nos títulos, Cormorant Garamond nos subtítulos e EB Garamond nos textos
 
 # 3. Elementos
 
-Biblioteca oficial: `elementos-v2/` (33 elementos, PNG transparente + SVG).
+Biblioteca oficial: `elementos-v2/` (30 elementos, PNG transparente + SVG), todos dourados, com textura de folha de ouro e brilho suave.
 
 - **Estrelas com brilho** — brilho, explosão estelar, radiante, estrela náutica, chuva de brilhos, lua e brilho, estrela de poeira, redemoinho galáctico, estrela vintage
-- **Símbolos místicos** — lua em órbita, luas gêmeas, olho radiante, sol com lua, pêndulo lunar, nuvem ornamental, aurora, leque art déco, talismã vertical
-- **Colagem vintage** — selos de cera (verde e roxo), selos postais (samambaias e floresta), etiquetas (verde e pergaminho), papel rasgado noturno, moldura ornamentada, marcador de página
+- **Sol, luas & símbolos** — lua em órbita, luas gêmeas, olho radiante, sol com lua, pêndulo lunar, nuvem ornamental, aurora, leque art déco, talismã vertical
 - **Portais & molduras** — portal em arco, guirlanda de folhas, moldura de carta, rosa dos ventos, cantoneira de samambaia, selo celeste
-
-Acabamento: dourado com textura de folha de ouro e brilho suave; peças de colagem com textura de papel e sombra leve.
+- **Enfeites & adornos** — fases da lua, lua envolta em ramos, constelação, divisor celeste, divisor botânico, poeira estelar
 
 ## Regras de uso
-- Use 2 a 4 elementos por arte (ex.: 1 moldura ou peça de colagem + 1 símbolo místico + brilhos).
+- Use 2 a 4 elementos por arte (ex.: 1 moldura + 1 lua ou sol + brilhos/divisor).
 - Dourado Metálico nos fundos escuros (`png/metalico/`); Dourado Velho no pergaminho (`png/velho/`).
 - Nunca usar os dourados em textos.
+- Sem peças de colagem (selos, etiquetas, papel rasgado).
 - Folhagens realistas e em aquarela: próxima etapa.

@@ -504,19 +504,27 @@ def svg(e, uid='x'):
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}"><defs>{defs(e, uid)}</defs>{wrap}</svg>'
 
 # ================= MOLDURAS (da primeira biblioteca, com o novo acabamento) =================
-def _importar_molduras():
+def _importar_v1():
     import importlib.util
     spec = importlib.util.spec_from_file_location('v1', os.path.join(HERE, '..', 'elementos', 'gerar.py'))
     v1 = importlib.util.module_from_spec(spec); spec.loader.exec_module(v1)
+    escolha = {k: 'molduras' for k in ['portal', 'guirlanda', 'moldura-taro', 'rosa-dos-ventos', 'cantoneira', 'selo-celeste']}
+    escolha.update({k: 'adornos' for k in ['divisor-celeste', 'divisor-botanico', 'fases-da-lua', 'lua-ramo', 'constelacao', 'poeira-estelar']})
     fundos = [PERG, PETRO, ROXO, VERDE, PERG, PETRO]
-    for i, e in enumerate([e for e in v1.E if e['cat'] == 'molduras']):
+    n = {'molduras': 0, 'adornos': 0}
+    for e in v1.E:
+        cat = escolha.get(e['key'])
+        if not cat: continue
         def fn(f0=e['fn']):
             return (f0().replace('class="fl"', 'fill="url(#ouro)"')
                     .replace('class="ln"', 'fill="none" stroke="url(#ouro)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"'))
-        bg = fundos[i % len(fundos)]
-        E.append(dict(key=e['key'], nome=e['nome'], desc=e['desc'], vb=e['vb'], cat='molduras', bg=bg,
+        bg = fundos[n[cat] % len(fundos)] if cat == 'molduras' else [ROXO, VERDE, PETRO, ROXO, VERDE, PETRO][n[cat] % 6]
+        n[cat] += 1
+        E.append(dict(key=e['key'], nome=e['nome'], desc=e['desc'], vb=e['vb'], cat=cat, bg=bg,
                       gold='metalico', glow=2, foil=True, paper=False, fn=fn))
-_importar_molduras()
+_importar_v1()
+# peças de colagem retiradas da biblioteca
+E[:] = [e for e in E if e['cat'] != 'colagem']
 
 if __name__ == '__main__':
     import copy
